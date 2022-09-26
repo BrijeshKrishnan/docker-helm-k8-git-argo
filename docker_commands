@@ -1,0 +1,46 @@
+## Docker commands used to build the application 
+# TODO: insert the docker build command
+docker build . -t techtrends
+## Docker commands used to run the application
+# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
+## Docker commands used to get the application logs
+# TODO: insert the docker logs command
+docker logs $(docker container ls | grep techtrends | awk '{ print $1; }')
+## Logs from the container running the TechTrends application
+# TODO: paste logs from the Docker container 
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+philips@MACC02ZQ0T2MD6N techtrends % docker run -d -p 7111:3111 techtrends
+0e3118148f4761d96de53b0aced8dcbe9687e67f4c8dcb6e81347313788c21ba
+philips@MACC02ZQ0T2MD6N techtrends % 
+philips@MACC02ZQ0T2MD6N techtrends % 
+philips@MACC02ZQ0T2MD6N techtrends % 
+philips@MACC02ZQ0T2MD6N techtrends % 
+philips@MACC02ZQ0T2MD6N techtrends % docker logs $(docker container ls | grep techtrends | awk '{ print $1; }')
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2022-09-26 06:12:14,663  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-09-26 06:12:14,663  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+2022-09-26 06:12:26,767 172.17.0.1 - - [26/Sep/2022 06:12:26] "GET / HTTP/1.1" 200 -
+2022-09-26 06:12:26,792 172.17.0.1 - - [26/Sep/2022 06:12:26] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-26 06:12:28,858 Article "2020 CNCF Annual Report" retrieved!
+2022-09-26 06:12:28,860 172.17.0.1 - - [26/Sep/2022 06:12:28] "GET /1 HTTP/1.1" 200 -
+2022-09-26 06:12:28,871 172.17.0.1 - - [26/Sep/2022 06:12:28] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-26 06:12:31,693 Article "KubeCon + CloudNativeCon 2021" retrieved!
+2022-09-26 06:12:31,694 172.17.0.1 - - [26/Sep/2022 06:12:31] "GET /2 HTTP/1.1" 200 -
+2022-09-26 06:12:31,710 172.17.0.1 - - [26/Sep/2022 06:12:31] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-26 06:12:34,079 Article "Kubernetes v1.20 Release Notes" retrieved!
+2022-09-26 06:12:34,080 172.17.0.1 - - [26/Sep/2022 06:12:34] "GET /3 HTTP/1.1" 200 -
+2022-09-26 06:12:34,095 172.17.0.1 - - [26/Sep/2022 06:12:34] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-26 06:12:38,430 Article "CNCF Cloud Native Interactive Landscape" retrieved!
+2022-09-26 06:12:38,430 172.17.0.1 - - [26/Sep/2022 06:12:38] "GET /4 HTTP/1.1" 200 -
+2022-09-26 06:12:38,448 172.17.0.1 - - [26/Sep/2022 06:12:38] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-09-26 06:12:43,984 Metrics request successfull
+2022-09-26 06:12:43,985 172.17.0.1 - - [26/Sep/2022 06:12:43] "GET /metrics HTTP/1.1" 200 -
+2022-09-26 06:12:49,285 Health request successfull
+2022-09-26 06:12:49,286 172.17.0.1 - - [26/Sep/2022 06:12:49] "GET /healthz HTTP/1.1" 200 -
+philips@MACC02ZQ0T2MD6N techtrends % 

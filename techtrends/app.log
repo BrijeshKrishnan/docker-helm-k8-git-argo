@@ -1,0 +1,16 @@
+2022-09-23 17:02:06,641  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-09-23 17:02:06,642  * Running on http://192.168.1.3:3111/ (Press CTRL+C to quit)
+2022-09-23 17:02:11,082 Metrics request successfull
+2022-09-23 17:02:11,083 127.0.0.1 - - [23/Sep/2022 17:02:11] "GET /metrics HTTP/1.1" 200 -
+2022-09-26 11:37:59,952  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-09-26 11:37:59,952  * Running on http://192.168.1.105:3111/ (Press CTRL+C to quit)
+2022-09-26 11:38:11,833 127.0.0.1 - - [26/Sep/2022 11:38:11] "GET / HTTP/1.1" 200 -
+2022-09-26 11:38:11,859 127.0.0.1 - - [26/Sep/2022 11:38:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-26 11:38:11,877 127.0.0.1 - - [26/Sep/2022 11:38:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-09-26 11:38:14,285 Article "2020 CNCF Annual Report" retrieved!
+2022-09-26 11:38:14,289 127.0.0.1 - - [26/Sep/2022 11:38:14] "GET /1 HTTP/1.1" 200 -
+2022-09-26 11:38:14,300 127.0.0.1 - - [26/Sep/2022 11:38:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-26 11:38:39,887 Health request successfull
+2022-09-26 11:38:39,888 127.0.0.1 - - [26/Sep/2022 11:38:39] "GET /healthz HTTP/1.1" 200 -
