@@ -16,8 +16,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: .
-          file: ./techtrends/Dockerfile
+          context: ./techtrends
+          file: ./Dockerfile
           platforms: linux/amd64
           push: true
           tags: bkk003/techtrends:latest
