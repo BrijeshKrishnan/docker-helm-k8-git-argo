@@ -3,7 +3,7 @@ name: techtrends
 description: TechTrends deployment manifests
 keywords:
   - techtrends
-version: latest
+version: 1.0.0
 maintainers:
   - name: bkk003
     email: bkk003@xyz.com
