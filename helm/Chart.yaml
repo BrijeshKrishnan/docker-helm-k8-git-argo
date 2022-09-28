@@ -1,0 +1,9 @@
+apiVersion: v1
+name: techtrends
+description: TechTrends deployment manifests
+keywords:
+  - techtrends
+version: latest
+maintainers:
+  - name: bkk003
+    email: bkk003@xyz.com
