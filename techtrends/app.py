@@ -39,6 +39,7 @@ def post(post_id):
     post = get_post(post_id)
     if post is None:
       app.logger.info(f'Article with ID "{post_id}" not found!')
+      app.logger.DEBUG
       return render_template('404.html'), 404
     else:
       app.logger.info(f'Article "{post["title"]}" retrieved!')
@@ -91,5 +92,11 @@ def create():
 
 # start the application on port 3111
 if __name__ == "__main__":
-    logging.basicConfig(format='%(asctime)s %(message)s',level=logging.DEBUG)
+    stdout_handler = logging.StreamHandler(sys.stdout)
+    stdout_handler.setLevel(logging.DEBUG)
+    stderr_handler = logging.StreamHandler(sys.stderr)
+    stderr_handler.setLevel(logging.ERROR)
+    dual_handlers = [stdout_handler, stderr_handler]
+    logging.basicConfig(level=logging.DEBUG, format='%(levelname)s:%(name)s:%(asctime)s: %(message)s', handlers=dual_handlers)
+    # logging.basicConfig(format='%(asctime)s %(message)s',level=logging.DEBUG)
     app.run(host='0.0.0.0', port='3111')
