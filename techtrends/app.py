@@ -1,4 +1,5 @@
 import sqlite3
+import sys
 import logging
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
@@ -38,8 +39,8 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-      app.logger.info(f'Article with ID "{post_id}" not found!')
-      app.logger.DEBUG
+    #   app.logger.info(f'Article with ID "{post_id}" not found!')
+      app.logger.error(f'Article with ID "{post_id}" not found!')
       return render_template('404.html'), 404
     else:
       app.logger.info(f'Article "{post["title"]}" retrieved!')
